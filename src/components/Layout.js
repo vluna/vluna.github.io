@@ -8,7 +8,9 @@ const Main = styled.main``
 const ThemeButton = styled.button`
   background: none;
   border: none;
-  color: ${(props) => props.theme.colors.primary};
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;  color: ${(props) => props.theme.colors.primary};
 `
 
 const Footer = styled.footer`
@@ -31,7 +33,7 @@ const Layout = ({ pageTitle, children }) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle isDarkTheme={isDarkTheme} />
-      <title>{pageTitle} | Victor Luna's Portfolio</title>
+      <title>Victor Luna's Portfolio</title>
       <Main id="main-content">
         <ThemeButton 
           onClick={switchTheme}

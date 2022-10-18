@@ -26,7 +26,7 @@ const TimelineElementContainer = styled.li`
 `
 
 const TimelineElement = styled.div`
-  padding: 2em 0;
+  padding: 2em 0 0;
   position: relative;
   top: -1.875em;
   left: 4em;
@@ -103,7 +103,7 @@ const Timeline = ({ data }) => {
             />
           )}
         </BadgeContainer>
-        <p>{el.description}</p>
+        {el.description ? <p>{el.description}</p> : null}
       </TimelineElement>
     </TimelineElementContainer>
   )

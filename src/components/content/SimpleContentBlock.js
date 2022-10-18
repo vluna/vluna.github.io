@@ -6,11 +6,20 @@ const Header = styled.h1`
   text-transform: uppercase;
   letter-spacing: 4px;
 `
+const SubHeader = styled.h2`
+  text-align: center;
+`
 const Paragraph = styled.p``
 
-const SimpleTitleBlock = ({ content }) => {
+const SimpleTitleBlock = ({ content, className }) => {
   return (
-    <Header>{content}</Header>
+    <Header className={className}>{content}</Header>
+  )
+}
+
+const SimpleSubtitleBlock = ({ content, className }) => {
+  return (
+    <SubHeader className={className}>{content}</SubHeader>
   )
 }
 
@@ -20,4 +29,4 @@ const SimpleTextBlock = ({ content }) => {
   )
 }
 
-export { SimpleTextBlock, SimpleTitleBlock }
+export { SimpleTextBlock, SimpleSubtitleBlock, SimpleTitleBlock }
