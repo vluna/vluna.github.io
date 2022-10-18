@@ -1,9 +1,14 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import Layout from '../components/Layout'
+import ExperienceContent from '../components/sections/ExperienceContent'
+import SkillsContent from '../components/sections/SkillsContent'
+import WorkHistory from '../components/sections/WorkHistory'
+import EducationHistory from '../components/sections/EducationHistory'
+import AboutMe from '../components/sections/AboutMe'
 
 const IntroSection = styled.section`
-  margin: 4em 0;
+  margin: 2em 0;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -13,8 +18,9 @@ const IntroSection = styled.section`
 const H1 = styled.h1`
   width: 95%;
   margin: auto;
-  font-size: 7rem;
+  font-size: 4rem;
   line-height: 0.95em;
+  text-transform: uppercase;
 
   @media (min-width: ${(props) => props.theme.breakpoints.md}) {
     width: 6.5em;
@@ -40,11 +46,10 @@ const Paragraph = styled.p`
   margin-right: 0.5rem;
 `
 
-const HeaderHRRight = styled.hr`
-  height: 1em;
+const HeaderHr = styled.hr`
+  height: .65em;
   background-color: ${(props) => props.theme.colors.text};
-  width: 95%;
-  margin: auto;
+  margin: .65em 0 0;
   border: none;
 
   @media (min-width: ${(props) => props.theme.breakpoints.md}) {
@@ -53,25 +58,17 @@ const HeaderHRRight = styled.hr`
   }
 `
 
-const HeaderHRLeft = styled(HeaderHRRight)`
-  margin-left: 40%;
-`
-
-
 const IndexPage = () => {
   return (
     <Layout pageTitle="Home Page">
       <H1>Victor Luna Full Stack Developer</H1>
-      <HeaderHRRight />
-      <IntroSection>
-        <Paragraph>&#128075; I am a full stack developer with a passion for education, web accessibility and sustainable development.</Paragraph>
-        <H2>Looking to change the world, but I can't find the source code.</H2>
-      </IntroSection>
-      <HeaderHRLeft />
-      <IntroSection>
-        <H2>Looking to change the world, but I can't find the source code.</H2>
-        <Paragraph>&#128075; Full stack developer with more than 5 years of experience. Dedicated self-starter with a background working in web development, user interface and user experience design. Domain expertise includes Ruby on Rails, Javascript, PHP, SQL, AngularJS, HTML, CSS, and Java. Passionate about using technology to solve today’s complex problems, and drive social change. Collaborative, detail-oriented, curious, and empathetic leader.</Paragraph>
-      </IntroSection>
+      <HeaderHr />
+      <Paragraph>&#128075; I am a full stack developer with a passion for education, web accessibility, sustainable development and security.</Paragraph>
+      <ExperienceContent />
+      <SkillsContent />
+      <WorkHistory />
+      <AboutMe />
+      <EducationHistory />
     </Layout>
   )
 }
