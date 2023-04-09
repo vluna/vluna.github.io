@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { lightTheme, darkTheme, GlobalStyle } from "../theme"
 import { ThemeProvider } from "styled-components"
 import styled from 'styled-components';
+import Popup from '../components/content/Popup'
 
 const Main = styled.main``
 
@@ -35,6 +36,7 @@ const Layout = ({ pageTitle, children }) => {
       <GlobalStyle isDarkTheme={isDarkTheme} />
       <title>Victor Luna's Portfolio</title>
       <Main id="main-content">
+        <Popup title="Why is this website so simple?"/>
         <ThemeButton 
           onClick={switchTheme}
           className="App-link"

@@ -2,14 +2,16 @@ import { createGlobalStyle } from "styled-components"
 
 const lightColors = {
   background: "#FCF5F2",   
-  primary: "#4F5FF2",
-  light: "#FCF5F2"
+  primary: "#033a56",
+  light: "#FCF5F2",
+  primary10: "#e4eaed"
 }
 
 const darkColors = {
-  background: "#4F5FF2",
+  background: "#033a56",
   primary: "#FCF5F2",
-  light: "#4F5FF2"
+  light: "#033a56",
+  primary10: "#1d4e67"
 }
 
 const lightThemeColors = Object.assign({}, lightColors)

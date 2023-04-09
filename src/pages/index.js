@@ -8,6 +8,7 @@ import WorkHistory from '../components/sections/WorkHistory'
 import EducationHistory from '../components/sections/EducationHistory'
 import AboutMe from '../components/sections/AboutMe'
 
+
 const TitleBlock = styled(SimpleTitleBlock)`
   margin: 0;
   padding: 0;
