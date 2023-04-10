@@ -11,7 +11,8 @@ const WorkHistory = () => {
   return (
     <Section id="work-history">
       <SimpleTitleBlock content="[ Work History ]" />
-      <Timeline 
+      <Timeline
+        id="work-history"
         data={workHistory}
       />
     </Section>

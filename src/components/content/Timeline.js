@@ -87,9 +87,9 @@ const BadgeContainer = styled.div`
   flex-wrap: wrap;
 `
 
-const Timeline = ({ data }) => {
-  const timelineRender = data.map((el) =>
-    <TimelineElementContainer>
+const Timeline = ({ id, data }) => {
+  const timelineRender = data.map((el, idx) =>
+    <TimelineElementContainer key={`${id}-${idx}`}>
       <TimelineElementIcon />
       <TimelineElement>
         <p>{el.start_date} - {el.end_date}</p>
@@ -97,8 +97,9 @@ const Timeline = ({ data }) => {
         <h4>{el.company}</h4>
         <h5>{el.subtitle}</h5>
         <BadgeContainer>
-          {el.tags.map((item) =>
+          {el.tags.map((item, jdx) =>
             <Badge
+              key={`${id}-badge-${jdx}`}
               content={item}
             />
           )}

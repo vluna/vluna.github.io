@@ -1,5 +1,6 @@
 const educationHistory = [
   {
+    id: 1,
     title: 'Machine Learning',
     subtitle: 'Certificate',
     start_date: "January 2021",
@@ -9,6 +10,7 @@ const educationHistory = [
     description: "" 
   },
   {
+    id: 2,
     title: 'Interactive Arts & Technology',
     subtitle: 'Bachelor of Science',
     start_date: "January 2013",
@@ -18,6 +20,7 @@ const educationHistory = [
     description: "" 
   },
   {
+    id: 3,
     title: 'Computing Science',
     subtitle: 'Diploma',
     start_date: "January 2013",
