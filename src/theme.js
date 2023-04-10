@@ -2,14 +2,16 @@ import { createGlobalStyle } from "styled-components"
 
 const lightColors = {
   background: "#FCF5F2",   
-  primary: "#4F5FF2",
-  light: "#FCF5F2"
+  primary: "#033a56",
+  light: "#FCF5F2",
+  primary10: "#e4eaed"
 }
 
 const darkColors = {
-  background: "#4F5FF2",
+  background: "#033a56",
   primary: "#FCF5F2",
-  light: "#4F5FF2"
+  light: "#033a56",
+  primary10: "#1d4e67"
 }
 
 const lightThemeColors = Object.assign({}, lightColors)
@@ -57,10 +59,6 @@ export const darkTheme = Object.assign(
   { colors: darkThemeColors }
 )
 
-// Dynamic global styles
-// Unfortunately Prettier doesn't format `createGlobalStyle`
-// TODO external link styles no longer working...
-// Seemingly nothing that doesn't involve a theme variable?
 export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
@@ -84,28 +82,11 @@ export const GlobalStyle = createGlobalStyle`
     color: ${(props) => props.theme.colors.primary};
     text-decoration: underline;
   }
-  mark {
-    background: ${(props) => props.theme.colors.markBackground};
-    box-shadow: inset 0 -2px 0 0 rgba(69,142,225,.8);
-  }
-
-  .anchor.before {
-    fill: ${(props) => props.theme.colors.text};
-  }
 
   hr {
     background: ${(props) => props.theme.colors.lightBorder};
   }
 
-
-
-  /* YouTube embeds */
-  iframe {
-    display: block;
-    max-width: 560px;
-    margin: 32px 0;
-  }
-  
   h1 {
     font-size: 3rem;
     line-height: 1.4;
