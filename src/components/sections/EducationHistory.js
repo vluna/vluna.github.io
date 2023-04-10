@@ -11,6 +11,7 @@ const EducationHistory = () => {
     <Section id="education">
       <SimpleTitleBlock content="[ Education ]" />
       <Timeline 
+        id="education"
         data={educationHistory}
       />
     </Section>

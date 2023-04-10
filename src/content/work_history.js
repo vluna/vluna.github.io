@@ -1,5 +1,6 @@
 const workHistory = [
   {
+    id: 1,
     title: 'Senior Software Engineer',
     subtitle: "",
     start_date: "April 2022",
@@ -9,6 +10,7 @@ const workHistory = [
     description: "Ruby is a simple to code Object Oriented Programming language. I use it with Rails framework to design, build and maintain scalable and reliable web applications in a fast-paced collaborative team setting. Many of the systems I build with Ruby on Rails are fast and simple to maintain. Learning Ruby and using Rails came with ease after using PHP with Yii2 framework." 
   },
   {
+    id: 2,
     title: 'Senior Web Developer',
     subtitle: "",
     start_date: "June 2021",

@@ -9,7 +9,7 @@ const Container = styled.div`
   background: ${(props) => props.theme.colors.primary10};
   width: 100%;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: .5em;
 `
 
 const PopupContent = styled.div`
@@ -32,39 +32,31 @@ const PopupContent = styled.div`
   }
 
   & > div {
-    width: 400px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    border-radius: 2em 2em 0 0;
+    width: 80%;
+    margin: .5em auto 0;
     padding: 2em;
-    background: white;
-  }
+    height: 100vh;
+    background: ${(props) => props.theme.colors.light};
 
-  header {
-    font-weight: bold;
-  }
+    h2 {
+      text-align: center;
+      margin: 0;
+      color: ${(props) => props.theme.colors.primary};
+    }
 
-  h1 {
-    font-size: 150%;
-    margin: 0 0 15px;
+    p {
+      color: ${(props) => props.theme.colors.primary};
+    }
   }
-`
+`;
 
-const CloseLink = styled(Link)`
-  color: #aaa;
-  line-height: 50px;
-  font-size: 80%;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  top: 0;
-  width: 70px;
-  text-decoration: none;
-
-  &:hover {
-    color: black;
-  }
+const StyledLink = styled(Link)`
+  padding: .5em 1em;
+  border-radius: .5em;
+  background-color: ${(props) => props.theme.colors.primary10};
+  justify-content: center;
+  display: flex;
 `
 
 const Popup = ({ title, id, content }) => {
@@ -75,13 +67,12 @@ const Popup = ({ title, id, content }) => {
       </Container>
       <PopupContent id="open-modal">
         <div>
-          <CloseLink href="#" title="Close" />
-          <h1>Why?</h1>
-          <ul>
-            <li>Energy Consumption: websites with a lot of graphics, animations, and videos require more energy to load and render, which means they contribute to higher carbon emissions from data centers and servers. </li>
-            <li>Accessibility: with lots of visual elements, it can sometimes be difficult to navigate for people with color blindness or visual impairments.</li>
-            <li>Page Speed: websites load faster and have shorter loading times. This does not only improve the UX but also reduces the time users spend waiting for pages to load, which can save energy and reduce carbon emissions.</li>
-          </ul>
+          <h2>Why?</h2>
+          <p><strong>Energy Consumption:</strong> websites with a lot of graphics, animations, and videos contribute to higher carbon emissions from data centers and servers as they require more energy to load and render.</p>
+          <p><strong>Accessibility:</strong> with lots of visual elements, it can sometimes be hard to navigate for people with colour blindness or visual impairments.</p>
+          <p><strong>Page Speed:</strong> shortening the loading times does not only improve the UX but also reduces the time users spend waiting for pages to load, which can save energy and reduce carbon emissions.</p>
+
+          <StyledLink href="#" title="Close" />
         </div>
       </PopupContent>
     </div>

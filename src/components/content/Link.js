@@ -5,9 +5,9 @@ const A = styled.a`
   text-decoration: none;
 `
 
-const Link = ({ href, title }) => {
+const Link = ({ href, title, className }) => {
   return (
-    <A href={href}>{title}</A>
+    <A href={href} className={className}>{title}</A>
   )
 }
 

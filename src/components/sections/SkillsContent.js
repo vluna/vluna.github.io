@@ -8,11 +8,12 @@ const Section = styled.section`
 `
 
 const Skills = () => {
-  const headers = ['Language', 'Years of Experience', 'Frameworks'];
+  const headers = ['Language', 'YOE', 'Frameworks'];
 
   return (
     <Section id="skills">
       <SimpleTable 
+        id="skills"
         headers={headers}
         data={languageSkills}
       />

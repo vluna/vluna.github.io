@@ -4,38 +4,55 @@ import Badge from './Badge';
 
 const Table = styled.table`
   width: 100%;
+  border: .2em solid;
+  margin: 0 auto;
+  border-collapse: collapse;
 `
-const Tr = styled.tr``
+
+const Tr = styled.tr`
+  width: 100%;
+`
+
 const Th = styled.th`
-  text-align: left;
-  padding: 15px;
+  padding: .75em;
+  border: .1em solid;
 `
 const Td = styled.td`
-  padding: 15px;
+  padding: .75em;
+  border: .1em solid;
 `
 
+const BadgeContainer = styled.div`
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+`
 
-const SimpleTable = ({ headers, data }) => {
-  const hedersRender = headers.map((header) =>
-    <Th>{header}</Th>
+const SimpleTable = ({ id, headers, data }) => {
+  const hedersRender = headers.map((header, idx) =>
+    <Th key={`${id}-header-${idx}`}>{header}</Th>
   )
   
-  const dataRender = data.map((el) =>
-    <Tr>
+  const dataRender = data.map((el, idx) =>
+    <Tr key={`${id}-body-${idx}`}>
       <Td>{el.title}</Td>
-      <Td>{el.yrs_experience}</Td>
-      <Td>{el.frameworks.map((item) =>
+      <Td style={{textAlign: "center"}}>{el.yrs_experience}</Td>
+      <Td>
+        <BadgeContainer>{el.frameworks.map((item, jdx) =>
         <Badge
-          content={item}
+        key={`${id}-badge-${jdx}`}
+        content={item}
         />
-      )}</Td>
+      )}</BadgeContainer></Td>
     </Tr>
   )
 
   return (
     <Table>
       <thead>
-        {hedersRender}
+        <tr>
+          {hedersRender}
+        </tr>
       </thead>
       <tbody>
         {dataRender}
