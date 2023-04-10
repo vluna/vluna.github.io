@@ -50,7 +50,7 @@ const NotFoundPage = () => {
       <H1>&#129488; Error 404!</H1>
       <HeaderHRRight />
       <IntroSection>
-        <Paragraph>Hmm... this is weird! Let's start over from <a href='/home' title='the home page' ariaLabel=''>the home page</a></Paragraph>
+        <Paragraph>Hmm... this is weird! Let's start over from <a href='/' title='home page' ariaLabel=''>the home page</a></Paragraph>
       </IntroSection>
     </Layout>
   )
