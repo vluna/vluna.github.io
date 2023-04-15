@@ -4,7 +4,7 @@ import Badge from './Badge';
 
 const Table = styled.table`
   width: 100%;
-  border: .2em solid;
+  border: .1em solid;
   margin: 0 auto;
   border-collapse: collapse;
 `

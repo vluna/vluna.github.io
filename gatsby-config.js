@@ -4,7 +4,8 @@ module.exports = {
         siteUrl: `https://vluna.github.io/`,
     },
     plugins: [
-
-    ],
-    pathPrefix: '/'
+      {
+        resolve: `gatsby-plugin-styled-components`
+      }
+    ]
 }

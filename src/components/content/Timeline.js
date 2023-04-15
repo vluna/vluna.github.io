@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Badge from './Badge';
 
 const TimelineContainer = styled.ul`
-  margin: 4em auto;
+  margin: 2em auto 4em;
   position: relative;
   padding: 0;
 
@@ -44,7 +44,9 @@ const TimelineElement = styled.div`
   
   h5 {
     font-size: 1em;
-    margin: 5px 0 0;
+    margin: 0;
+    font-weight: 300;
+    font-style: italic;
   }
 
   p:not(:first-child) {
@@ -85,6 +87,7 @@ const BadgeContainer = styled.div`
   display: flex;
   width: 100%;
   flex-wrap: wrap;
+  margin-top: .5em;
 `
 
 const Timeline = ({ id, data }) => {

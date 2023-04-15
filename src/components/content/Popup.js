@@ -3,11 +3,10 @@ import styled from 'styled-components';
 import Link from './Link'
 
 const Container = styled.div`
-  display: grid;
+  display: flex;
   justify-content: center;
   align-items: center;
   background: ${(props) => props.theme.colors.primary10};
-  width: 100%;
   padding: 10px;
   border-radius: .5em;
 `

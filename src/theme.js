@@ -88,9 +88,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 1.4;
-    margin: 2rem 0;
+    margin: 2rem 0 0;
     font-weight: 700;
     scroll-margin-top: ${theme.variables.navHeight};
     scroll-snap-margin: ${theme.variables.navHeight};
