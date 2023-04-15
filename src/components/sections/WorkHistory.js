@@ -10,7 +10,7 @@ const Section = styled.section``
 const WorkHistory = () => {
   return (
     <Section id="work-history">
-      <SimpleTitleBlock content="[ Work History ]" />
+      <SimpleTitleBlock content="[ History ]" />
       <Timeline
         id="work-history"
         data={workHistory}
